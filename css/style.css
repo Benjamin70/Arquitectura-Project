@@ -46,11 +46,17 @@ img{
     width: 90%;
 }  
 .btn{
+    width: 100%;
     color: var(--gris);
     background-color: var(--blanco);
     border: 1px solid var(--gris);
     padding: .5rem 2rem;
     transition: background-color .3s;
+}
+@media (min-width: 768px) { 
+    .btn{
+        width: auto;
+    }
 }
 .btn:hover{
     background-color: var(--gris);
@@ -334,11 +340,48 @@ img{
         font-size: 2rem;
     }
 }
-
 .copyright{
     background-color: var(--negro);
     text-align: center;
     margin: 5rem 0 0 0;
     font-size: 2rem;
     padding: 1rem;
+}
+
+/** Formulario o Contacto **/
+.formulario {
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset{
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 2rem;
+}
+
+.formulario legend{
+    background-color: #005485;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.campo label{
+    flex-basis: 10rem;
+}
+
+.campo input:not([type="radio"]),
+.campo textarea,
+.campo select { 
+    flex: 1;
+    border: 1px solid #e1e1e1;
 }
